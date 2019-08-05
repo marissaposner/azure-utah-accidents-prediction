@@ -17,6 +17,8 @@ training examples. That's what we call a severe class imbalance issue. We keep t
 slightly imbalanced, and use an informative sampling approach to get the model to learn the fine
 grained differences between what causes a car accident or not.
 
+We pose the car accident risk prediction as a classification problem with two labels (accident and no accident). It could equally be posed as a regression problem (number of accidents), but on our timescale (one hour) we don’t expect to see more than one accident per road segment so this simplifies the problem a bit.
+
 ## The Data
 We have 7 years from car crash records for the state of Utah, but that's only the start of our
 training set for this supervised machine learning problem. We use many different features to try
