@@ -19,6 +19,12 @@ grained differences between what causes a car accident or not.
 
 We pose the car accident risk prediction as a classification problem with two labels (accident and no accident). It could equally be posed as a regression problem (number of accidents), but on our timescale (one hour) we don’t expect to see more than one accident per road segment so this simplifies the problem a bit.
 
+For negative sampling:
+Randomly select an accident record from positive examples
+Randomly alter: the road segment, the hour of the day, or the day of the year.
+If the new sample isn’t with in the accident records, add to the list of negative samples
+Repeat until we have a large number of negative samples (a few times the number of positive samples)
+
 ## The Data
 We have 7 years from car crash records for the state of Utah, but that's only the start of our
 training set for this supervised machine learning problem. We use many different features to try
